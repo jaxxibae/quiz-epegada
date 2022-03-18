@@ -1,5 +1,5 @@
 import styled, { createGlobalStyle } from 'styled-components';
-import BGImage from './images/nattu-adnan-unsplash.jpg';
+import BGImage from './images/bg.jpeg';
 
 export const GlobalStyle = createGlobalStyle`
   html {
@@ -37,8 +37,8 @@ export const Wrapper = styled.div`
   }
 
   h1 {
-    font-family: Fascinate Inline;
-    background-image: linear-gradient(180deg, #fff, #87f1ff);
+    font-family: Fascinate Inline, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-image: linear-gradient(to right, #56ab2f, #a8e063);
     font-weight: 400;
     background-size: 100%;
     background-clip: text;
@@ -46,7 +46,7 @@ export const Wrapper = styled.div`
     -webkit-text-fill-color: transparent;
     -moz-background-clip: text;
     -moz-text-fill-color: transparent;
-    filter: drop-shadow(2px 2px #0085a3);
+    filter: drop-shadow(2px 2px #56ab5f);
     font-size: 70px;
     text-align: center;
     margin: 20px;

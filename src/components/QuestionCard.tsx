@@ -4,9 +4,11 @@ import { AnswerObject } from '../App';
 // Styles
 import { Wrapper, ButtonWrapper } from './QuestionCard.styles';
 
+import { Answer } from '../API';
+
 type Props = {
   question: string;
-  answers: string[];
+  answers: Answer[];
   callback: (e: React.MouseEvent<HTMLButtonElement>) => void;
   userAnswer: AnswerObject | undefined;
   questionNr: number;
@@ -29,12 +31,12 @@ const QuestionCard: React.FC<Props> = ({
     <div>
       {answers.map((answer) => (
         <ButtonWrapper
-          key={answer}
-          correct={userAnswer?.correctAnswer === answer}
-          userClicked={userAnswer?.answer === answer}
+          key={answer.value}
+          userClicked={userAnswer?.answer.value === answer.value}
+          correct={true}
         >
-          <button disabled={userAnswer ? true : false} value={answer} onClick={callback}>
-            <span dangerouslySetInnerHTML={{ __html: answer }} />
+          <button disabled={userAnswer ? true : false} value={answer.value} onClick={callback}>
+            <span dangerouslySetInnerHTML={{ __html: answer.value }} />
           </button>
         </ButtonWrapper>
       ))}
