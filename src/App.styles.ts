@@ -1,5 +1,5 @@
-import styled, { createGlobalStyle } from 'styled-components';
-import BGImage from './images/bg.jpeg';
+import styled, { createGlobalStyle } from "styled-components";
+import BGImage from "./images/bg.jpeg";
 
 export const GlobalStyle = createGlobalStyle`
   html {
@@ -19,6 +19,17 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Catamaran', sans-serif;
     box-sizing: border-box;
   }
+
+  .game-over {
+    background: #ebfeff;
+    border-radius: 10px;
+    border: 2px solid #0085a3;
+    padding: 20px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    font-size: 24px;
+    color: #000;
+  }
 `;
 
 export const Wrapper = styled.div`
@@ -37,7 +48,8 @@ export const Wrapper = styled.div`
   }
 
   h1 {
-    font-family: Fascinate Inline, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Fascinate Inline, Haettenschweiler, "Arial Narrow Bold",
+      sans-serif;
     background-image: linear-gradient(to right, #56ab2f, #a8e063);
     font-weight: 400;
     background-size: 100%;
@@ -52,7 +64,8 @@ export const Wrapper = styled.div`
     margin: 20px;
   }
 
-  .start, .next {
+  .start,
+  .next {
     cursor: pointer;
     background: linear-gradient(180deg, #ffffff, #ffcc91);
     border: 2px solid #d38558;
